@@ -1,5 +1,5 @@
 -- Coded by Xerxes468893#0001 (Peter Greek) For BCDOJRP, released to the public
-print('Loaded ARPF by Xerxes468893 (Peter Greek) for BCDOJRP.') -- Do not Remove Pls!
+print('Loaded ARPF by Xerxes468893 (Peter Greek) for BCDOJRP.') -- Do not Remove Pls!change
 local str = {}
 Citizen.CreateThread(function()
 	while true do 
