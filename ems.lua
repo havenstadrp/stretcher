@@ -28,13 +28,13 @@ AddEventHandler("ARPF-EMS:opendoors", function()
     veh = VehicleInFront()
     if open == false then
         open = true
-        SetVehicleDoorOpen(veh, 4, false, false)
+        SetVehicleDoorOpen(veh, 2, false, false)
         Citizen.Wait(1000)
-        SetVehicleDoorOpen(veh, 5, false, false)
+        SetVehicleDoorOpen(veh, 3, false, false)
     elseif open == true then
         open = false
-        SetVehicleDoorShut(veh, 4, false)
-        SetVehicleDoorShut(veh, 5, false)
+        SetVehicleDoorShut(veh, 2, false)
+        SetVehicleDoorShut(veh, 3, false)
     end
 end)
 
@@ -115,7 +115,7 @@ RegisterCommand('spawnstr', function()
     local str = CreateObject(GetHashKey('prop_ld_binbag_01'), GetEntityCoords(PlayerPedId()), true)
 end, false)
 
-RegisterCommand('delStr', function(source, args)
+RegisterCommand('delstr', function(source, args)
     local object = GetHashKey('prop_ld_binbag_01')
     local x, y, z = table.unpack(GetEntityCoords(PlayerPedId(), true))
     if DoesObjectOfTypeExistAtCoords(x, y, z, 2.5, object, true) then
